@@ -1,0 +1,114 @@
+.wysiwyg
+  color #000
+  font 15px/1.44 $roboto
+  margin-left: -10px
+  margin-right: -10px
+  padding 0
+  text-align justify
+  @media (min-width $tablet)
+    font-size 18px
+    margin-left: 0
+    margin-right: 0
+  > *
+    margin 0 0 20px
+    padding 0 10px
+    @media (min-width $tablet)
+      margin 0 0 30px
+      padding 0 30px
+    @media (min-width $tablet)
+      margin 0 0 30px
+      padding 0 50px
+    
+  > img
+    display block
+    margin 54px 0
+    margin-left auto
+    margin-right auto
+    max-width 100%
+    padding 0
+  .circle-image
+  .circle-image img
+    border-radius 50%
+  ol
+    li 
+      margin: 0 0 0 35px
+      padding: 0 0 0 5px
+  ul
+    li
+      list-style-type none
+      margin 0
+      padding 0 0 0 40px
+      position relative
+      &::before
+        position absolute
+        top 10px
+        left 18px
+        background $c-accent
+        content ''
+        display block
+        height 4px
+        width 4px
+  a
+    color $c-accent
+    &:hover
+      text-decoration underline
+  .slider
+    margin 54px 0
+    padding 0
+    position relative
+    text-align center
+    .slick-slide
+      img
+        display inline-block
+    .slider-arrow
+      position absolute
+      top 50%
+      cursor pointer
+      display flex
+      justify-content center
+      align-items center
+      height 50px
+      transform translateY(-50%)
+      width 50px
+      z-index 1
+      @media (min-width $tablet)
+        height 74px
+        width 90px
+      svg
+        display block
+        fill $c-accent
+        transition transform .3s ease
+        width 37px    
+    &__prev
+      left 0
+      @media (min-width: 1000px) and (max-width: 1200px)
+        left 0
+      @media (min-width: 1201px)
+        left -100px
+      &:hover
+        svg
+          @media (min-width: 1025px)
+            transform translateX(-15px)
+    &__next
+      right 0
+      @media (min-width: 1000px) and (max-width: 1200px)
+        right 0
+      @media (min-width: 1201px)
+        right -100px
+
+      &:hover
+        svg
+          @media (min-width: 1025px)
+            transform translateX(15px)  
+        
+    p
+    &__caption
+      color $c-title
+      font bold 18px/1.3 $roboto-c
+      margin 0
+      padding .8em 0 0
+      a
+        color inherit
+        &:hover
+          text-decoration underline
+  

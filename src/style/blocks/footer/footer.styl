@@ -1,0 +1,79 @@
+.slide-footer
+  position absolute
+  left 0
+  right 0
+  bottom 0
+  background #000
+  font 10px/16px $gothic
+  text-align center
+  @media (min-width: $tablet)
+    background #121212
+  &__wrapper
+    margin 0 auto
+    max-width 1000px
+    padding 13px 40px 0
+    @media (min-width: $tablet)
+      display flex
+      justify-content space-between
+      align-items center
+      flex-wrap wrap
+  &__top
+    height 42px    
+  &__bottom
+    background #000
+    height 90px
+  &__logos
+    display none
+    margin 0 auto
+    max-width 1000px
+    padding 0 40px
+    * + *
+      margin 0 0 0 26px
+    @media (min-width: $tablet)
+      display flex
+      align-items center
+      height 90px
+    .social-icons
+      margin 0 0 0 auto  
+    .footer-ocean
+      background url('../i/footer_ocean.png') 50% no-repeat
+      background-size contain
+      height 30px
+      margin 0 56px 0 0
+      position relative
+      width 140px
+      &::after
+        position absolute
+        top 2px
+        right -41px
+        background #3b78bf
+        content ''
+        height 30px
+        width 2px
+    .cedec
+      background url('../i/cedec.png') 50% no-repeat
+      background-size contain
+      height 30px
+      width 89px
+    .iso
+      background url('../i/iso.png') 50% no-repeat
+      background-size contain
+      height 38px
+      width 37px
+    .eqa
+      background url('../i/eqa.png') 50% no-repeat
+      background-size contain
+      height 38px
+      width 38px
+      
+  &__address
+    color #929292
+    margin 0
+  &__links
+    a
+      color #3b78bf
+      display inline-block
+      &:hover
+        text-decoration underline
+      & + a
+        margin 0 0 0 10px  

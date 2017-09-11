@@ -1,0 +1,33 @@
+.social-icons
+  display flex
+  justify-content center
+  margin 0
+  padding 0
+  text-align center
+  &__item
+    border 1px solid #3b78bf
+    border-radius 50%
+    cursor pointer
+    display flex
+    justify-content center
+    align-items center
+    height 40px
+    list-style-type none
+    margin 0
+    padding 0
+    width 40px
+    &:hover
+      border-color #fff
+      svg
+        fill #fff
+    a
+      display block
+      height 100%
+      width 100%    
+    svg
+      fill #3b78bf
+      height 100%
+      width 100%
+    
+    & + .social-icons__item
+      margin 0 0 0 11px

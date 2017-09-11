@@ -1,0 +1,88 @@
+.section
+  background-size cover
+  background-repeat no-repeat
+  background-position 50% 0
+  .big-ocean-logo
+    align-self center
+    background url('../i/ocean_big_logo.png') 50% no-repeat
+    background-size contain
+    height 47px
+    width 220px
+    @media (min-width: $tablet)
+      height 64px
+      width 300px
+  .next-section-button
+    position absolute
+    left 0
+    right 0
+    bottom 65px
+    background url('../i/next_section_button.png') 50% no-repeat
+    background-size 20px 22px
+    cursor pointer
+    height 50px
+    margin 0 auto
+    width 50px
+  &__inner
+    display flex
+    flex-direction column
+    justify-content center
+    height 100%
+    padding-bottom 42px
+    position relative
+    text-align center
+    width 100%
+  &__double-wrap
+    display flex
+    flex-direction column
+    height 100%
+    padding-bottom 42px
+    width 100%
+    @media (min-width: $tablet)
+      flex-direction row
+    a
+      flex 0 0 50%
+    
+    .left-b
+      background-image url('../i/s2_1_bg.jpg')
+    .right-b
+      background-image url('../i/s2_2_bg.jpg')  
+      
+    .left-b
+    .right-b
+      background-size cover
+      background-repeat no-repeat
+      background-position 50%
+  &-title
+    color #fff
+    display flex
+    align-items center
+    justify-content center
+    height 100%
+    font 20px/36px $korataki
+    letter-spacing .05em
+    text-transform uppercase
+    &:hover
+      span::after
+        transform translateY(-10px)
+    span
+      position relative
+      &::after
+        position absolute
+        bottom -24px
+        left 0
+        right 0
+        background #3b78bf
+        content ''
+        display block
+        height 3px
+        margin 0 auto
+        transition transform .2s ease
+        width 50px    
+  &._s1
+    background-image url('../i/s1_bg.jpg')
+  &._s2
+    background-color #f6f6f6
+  &._s3
+    background-image url('../i/s3_bg.jpg')
+  &._s4
+    background-image url('../i/s4_bg.jpg')

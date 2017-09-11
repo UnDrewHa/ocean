@@ -1,0 +1,27 @@
+{
+  "name": "spoon",
+  "devDependencies": {
+    "browser-sync": "^2.2.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-if": "^2.0.2",
+    "gulp-pug": "^3.3.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-svg-sprite": "^1.3.6",
+    "gulp-watch": "^4.3.11",
+    "yargs": "^7.0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

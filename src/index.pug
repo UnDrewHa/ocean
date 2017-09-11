@@ -1,0 +1,74 @@
+include blocks/mixins
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Ocean
+    meta(name='description', content='Ocean')
+    meta(name='viewport', content='width=device-width')
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+  body
+    - var items = ['Inicio', 'Corporativo', 'Residencial', '¿Quienes somos?', 'Trabaja con nosotros'];
+    +burger(items)
+    header.header
+        .header__wrapper
+            .ocean-logo
+            .anos-logo
+            .header__burger: span
+    #fullpage
+        .section._s1
+            .section__inner
+                .big-ocean-logo
+                .next-section-button.js-next-section    
+                footer.slide-footer._last
+                    .slide-footer__top
+                        .slide-footer__wrapper
+                            p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                            .slide-footer__links
+                              a(href='#') Teléfono: 913 866 866
+                              a(href='mailto:info@grupocean.com') info@grupocean.com
+        .section._s2
+            .section__double-wrap
+                a(href='#').section-title.left-b: span RESIDENCIAL
+                a(href='#').section-title.right-b: span CORPORATIVO
+            footer.slide-footer._last
+                    .slide-footer__top
+                        .slide-footer__wrapper
+                            p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                            .slide-footer__links
+                              a(href='#') Teléfono: 913 866 866
+                              a(href='mailto:info@grupocean.com') info@grupocean.com
+        .section._s3
+            .section__inner
+                a(href='#').section-title: span ¿QUIENES SOMOS?
+                footer.slide-footer._last
+                    .slide-footer__top
+                        .slide-footer__wrapper
+                            p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                            .slide-footer__links
+                              a(href='#') Teléfono: 913 866 866
+                              a(href='mailto:info@grupocean.com') info@grupocean.com
+        .section._s4
+            .section__inner
+                a(href='#').section-title: span TRABAJA<br>CON NOSOTROS
+                footer.slide-footer._last
+                    .slide-footer__top
+                        .slide-footer__wrapper
+                            p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                            .slide-footer__links
+                              a(href='#') Teléfono: 913 866 866
+                              a(href='mailto:info@grupocean.com') info@grupocean.com
+                    .slide-footer__bottom
+                        .slide-footer__logos
+                            .footer-ocean
+                            .cedec
+                            .iso
+                            .eqa
+                            ul.social-icons
+                                li.social-icons__item._fb: a(href='#').
+                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
+                                li.social-icons__item._.in: a(href='#').
+                                    <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+    script(src='js/main.js')
