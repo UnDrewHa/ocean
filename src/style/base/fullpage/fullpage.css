@@ -119,10 +119,10 @@ html.fp-enabled,
 
 @media (max-width: 767px) {
     #fp-nav.right {
-        right: -10px;
+        right: 0;
     }
     #fp-nav.left {
-        left: -10px;
+        left: 0;
     }
 }
 .fp-slidesNav{

@@ -1,0 +1,56 @@
+#fullpage
+  ._fullpage-accordion &[data-type='accordion']
+    display flex
+    height 100%
+    overflow hidden
+    .section
+      flex 1 4
+      overflow hidden
+      padding 0
+      position relative
+      transition flex .6s ease
+      &::before
+        position absolute
+        top 50%
+        left 0
+        content ''
+        background #3b78bf
+        display block
+        height 50px
+        margin -25px 0 0
+        pointer-events auto
+        width 3px
+        z-index 2
+      &::after
+        position absolute
+        top -10px
+        left -10px
+        bottom -10px
+        right -10px
+        background #000
+        content ''
+        opacity .8
+        transition opacity .6s ease
+      &._active
+        flex 4
+        &::before
+          opacity 0
+          pointer-events none
+        &::after
+          opacity 0
+          pointer-events none
+          
+        .section-title
+          opacity 1
+          transition all .3s ease .2s
+          
+    .section-title
+      position absolute
+      top 0
+      left 0
+      right 0
+      opacity 0
+      white-space nowrap
+    footer
+      display none
+  

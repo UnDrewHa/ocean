@@ -6,49 +6,79 @@
   width 100%
   @media (min-width: $tablet)
     height 90px
+  &._inner-page
+    @media (min-width: $tablet)
+      background #121212
+      height 50px
+      .ocean-logo
+        @media (min-width: $tablet)
+          display block
   &__wrapper
     display flex
     align-items center
+    justify-content space-between
     height 100%
-    padding 0 10px
+    padding 0 0 0 10px
     position relative
     @media (min-width: $tablet)
-      padding 0
-  .ocean-logo
+      padding 0 28px 0 40px
+  .page-title
+    color #fff
     display none
-    @media (min-width: $tablet)
+    font 14px/36px $korataki
+    letter-spacing .05em
+    margin 0 auto 0 82px
+    position relative
+    &::before
       position absolute
       top 50%
-      left 40px
-      background url('../i/ocean_logo.png') 50% no-repeat
-      background-size contain
+      left -41px
+      background #3b78bf
+      content ''
+      display block
       height 30px
       margin -15px 0 0
+      width 2px
+    ._fullpage-accordion &
+      display block
+  .ocean-logo
+    display none
+    opacity 0
+    pointer-events none
+    @media (min-width: $tablet)
+      background url('../i/ocean_logo.png') 50% no-repeat
+      background-size contain
+      display block
+      height 30px
       width 140px
     ._after-intro &
       @media (min-width: $tablet)
-        display block
+        opacity 1
+        pointer-events auto
+    ._fullpage-accordion &
+      opacity 1
+      pointer-events auto
   .anos-logo
     background url('../i/anos_logo.png') 50% no-repeat
     background-size contain
     height 14px
     width 106px
     @media (min-width: $tablet)
-      margin 0 auto
+      margin 0
     ._after-intro &
       @media (max-width: $tablet - 1)
-        display none  
+        opacity 0
+        pointer-events none
+    ._fullpage-accordion &
+      display none
   &__burger
     cursor pointer
     height 44px
     margin 0
-    position absolute
-    top 50%
-    right 0
-    margin -22px 0 0
+    position relative
     width 44px
     @media (min-width: $tablet)
-      right 28px
+      margin 0 0 0 96px
     span
     &::before
     &::after

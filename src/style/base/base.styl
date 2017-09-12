@@ -6,6 +6,16 @@ img
   max-width 100%
   
 body
+  height 100%
   padding 44px 0 0
   @media (min-width: $tablet)
     padding 90px 0 0
+  &._fullpage-accordion  
+    @media (min-width: $tablet)
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+      flex-direction column
+      padding 50px 0 0

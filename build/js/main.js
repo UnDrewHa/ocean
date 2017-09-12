@@ -13,32 +13,46 @@ function deviceDetector () { var b=navigator.userAgent.toLowerCase(),a=function(
 function onSlideLeave (index, nextIndex, direction) {
     if (index === 1 && direction === 'down') {
         $('body').addClass('_after-intro');
-    } else if (index > 1 && direction === 'up') {
+    } else if (index > 1 && direction === 'up' && nextIndex === 1) {
         $('body').removeClass('_after-intro');
     }
 }
 
 $(document).ready(function() {
 
-    var slideNavigation = deviceDetector().device !== 'mobile' ? true : false;
-    
-    $('#fullpage').fullpage({
-        navigation: slideNavigation,
-        navigationPosition: 'right',
-        controlArrows: false,
-        verticalCentered: false,
-        paddingTop: '0',
-        paddingBottom: '0',
-        fixedElements: '.header',
+    var slideNavigation = deviceDetector().device !== 'mobile',
+        fullpageContainer = $('#fullpage'),
+        makeAccordion = (deviceDetector().device === 'desktop' && $(window).width() >= 1000 && fullpageContainer.attr('data-type') === 'accordion'),
+        body = $('body');
 
-        onLeave: onSlideLeave
-    });
+    if (!makeAccordion && fullpageContainer) {
+        fullpageContainer.fullpage({
+            navigation: slideNavigation,
+            navigationPosition: 'right',
+            controlArrows: false,
+            verticalCentered: false,
+            paddingTop: '0',
+            paddingBottom: '0',
+            fixedElements: '.header',
+            // loopBottom: true,
+
+            onLeave: onSlideLeave
+        });
+
+        $('.js-next-section').on('click', function () {
+            $.fn.fullpage.moveSectionDown();
+        });
+    } else {
+        body.addClass('_fullpage-accordion');
+        fullpageContainer.on('mouseover', '.section', function () {
+            fullpageContainer.find('._active').removeClass('_active');
+            $(this).addClass('_active');
+        });
+    }
+
+    
 
     $('.header__burger, .burger-menu__close, .burger-menu__overlay').on('click', function () {
         $('body').toggleClass('burger-menu-opened');
-    });
-
-    $('.js-next-section').on('click', function () {
-        $.fn.fullpage.moveSectionDown();
     });
 });
