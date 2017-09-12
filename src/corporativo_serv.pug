@@ -1,0 +1,137 @@
+include blocks/mixins
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Ocean Corporativo
+    meta(name='description', content='Ocean')
+    meta(name='viewport', content='width=device-width')
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+  body._inner-page
+    - var items = ['Inicio','Instalaciones acuaticas','Limpieza','Servicios auxiliares','Building & Construction','Mantenimiento'];
+    +burger(items)
+    header.header._inner-page
+        .header__wrapper
+            a(href='index.html').ocean-logo
+            .anos-logo    
+            h1.page-title SERVICIOS AUXILIARES
+            .header__burger: span
+                    
+    .main
+        .section._intro-section._corp1
+            .section__inner
+                .section-title: span Corporativo
+                .next-section-button.js-next-section
+            footer.slide-footer._last
+                .slide-footer__top
+                    .slide-footer__wrapper
+                        p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                        .slide-footer__links
+                          a(href='#') Teléfono: 913 866 866
+                          a(href='mailto:info@grupocean.com') info@grupocean.com
+        .parallax-block(data-parallax="scroll" data-image-src="i/corporativo_serv_parallax.jpg")
+        .main__content
+            .wysiwyg
+                p Conocemos la importancia del análisis de las necesidades en base a las características del inmueble y la actividad que se desarrolla. De este modo, diferenciamos las labores a desempeñar en un hospital, local comercial,  un edificio de oficinas o una nave industrial.
+                ul
+                    li Conserjería/Auxiliar de servicios
+                    li Recepción
+                    li Seguridad
+                h2 Conserjería / Auxiliar de servicios
+                p <b>La conserjería</b> constituye un servicio esencial en control de inmuebles. Sin embargo no todos los inmuebles son iguales y no todos los servicios requieren de las mismas prestaciones.
+                p Disponemos de un departamento especializado para el servicio de <b>conserjería y auxiliares de servicios</b>, que diseñará un servicio acorde a sus necesidades, seleccionará los perfiles adecuados y pondrá en marcha de una manera rápida su servicio.
+                p Somos conscientes de que en muchos casos la productividad de estos puestos de trabajo es susceptible de ser mejorada.
+                p El personal destinado a este servicio dispone de grandes tiempos muertos que aprovechados de la manera adecuada posibilitaría aumentar su productividad. Dotado de la correcta tecnología, estas son algunas de las tareas que nuestros auxiliares realizan:
+                ul
+                    li Control de accesos de personas, vehículos y mercancías.
+                    li Realización de rondas de supervisión de las instalaciones comprobando el correcto funcionamiento de estas.
+                    li Mantenimiento diario de las instalaciones.
+                    li Reparación de pequeñas incidencias.
+                    li Atención a los usuarios del inmueble.
+                    li Información y orientación de visitas.
+                    li Control de las revisiones técnicas.
+                    li Aviso a las autoridades competentes y a los servicios de emergencia en el caso que lo una situación lo exija.
+                    li Recepción, custodia y reparto de correo y mensajería.
+                    li Control de flota.
+                    li Y en general cualquier función que exija el inmueble en el día a día.
+    
+        .parallax-block(data-parallax="scroll" data-image-src="i/corporativo_serv_parallax2.jpg")
+        .main__content
+            .wysiwyg
+                h2 Recepción
+                p Nuestro objetivo es implantar un modelo de recepción dinámico y altamente productivo mediante las herramientas más punteras del mercado haciendo que el tiempo de nuestro personal sea aprovechado al máximo. 
+                p Nuestra solución no pasa por ofrecer  a nuestros clientes  un/a operario/a con un horario determinado sino la ejecución de determinadas tareas en un horario determinado. 
+                p Los principales puntos del servicio de recepción que Ocean ofrece son:
+                ul
+                    li Recepción y control de visitas.
+                    li Recepción de llamadas.
+                    li Envío y gestión de mensajería diaria.
+                    li Envío y gestión de correo diario.
+                    li Otras labores administrativas.
+                p Ofrece valor añadido de imagen y profesionalidad, aportando al personal laboral una uniformidad y un código de vestuario e higiene personal.
+                p Al mismo tiempo, poseemos una cobertura de contingencias del servicio garantizada, a través de recursos de backup correctamente formados.
+                p Tanto las ausencias programadas, como las imprevistas, son cubiertas automáticamente o en un plazo no superior a 2 horas. La gestión del servicio que ofrecemos, está supervisada de forma continuada, en cuanto a implantación y desarrollo del mismo; asegurando a nuestro cliente una asistencia eficiente y una estricta legalidad en materia laboral. 
+        .parallax-block(data-parallax="scroll" data-image-src="i/corporativo_serv_parallax3.jpg")
+        .main__content
+            .wysiwyg
+                h2 Seguridad
+                p En Ocean , a través de nuestros Partners generamos valor a través de los servicios de seguridad. Damos soluciones específicas a nuestro cliente dependiendo de sus necesidades.
+                p Aplicamos todos los recursos a nuestro alcance para dar cobertura a cualquier elemento que sea susceptible de peligro o amenaza:
+                ul
+                    li Instalación y mantenimiento de Servicios electrónicos (CCTV, control de accesos, alarmas).
+                    li Seguridad electrónica.
+                    li Planes de seguridad.
+                    li Vigilancia Física.
+        .main__content
+            .wysiwyg
+                h2 Остальные блоки для верстки:
+                ol
+                    li Seguridad electrónica.
+                    li Planes de seguridad.
+                    li Vigilancia Física.
+                p <b class='em'>En Ocean</b>, a través de nuestros Partners generamos valor a través de los servicios de seguridad. Damos soluciones específicas a nuestro cliente dependiendo de sus necesidades.
+                p Aplicamos todos los recursos a nuestro alcance para dar cobertura a cualquier elemento que sea susceptible de peligro o amenaza:
+                hr
+                h3 Nuestros Valores:
+                ol.white
+                    li ALTA CALIDAD
+                    li PRECIOS COMPETENTES
+                    li
+                        | SEGURIDAD Y LEGALIDAD
+                        ul
+                            li Personal contratado
+                            li Seguro de Responsabilidad Civil
+                            li Plan de prevención de riesgos laborales
+                            li Plan de vigilancia de la Salud de los trabajadores
+                            li Ley orgánica de Protección de datos.
+                    li
+                        | GARANTÍAS DE ÉXITO
+                        ul
+                            li Domicilio de recibos
+                            li Gestión integral de inscripciones
+                            li Posibilidad de gestión online. Sin moverte de casa
+                            li Coordinadores presenciales en los centros
+                            li Profesores de sustitución en caso de ausencia
+                hr
+
+    footer.slide-footer
+        .slide-footer__top
+            .slide-footer__wrapper
+                p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                .slide-footer__links
+                  a(href='#') Teléfono: 913 866 866
+                  a(href='mailto:info@grupocean.com') info@grupocean.com
+        .slide-footer__bottom
+            .slide-footer__logos
+                a(href='index.html').footer-ocean
+                .cedec
+                .iso
+                .eqa
+                ul.social-icons
+                    li.social-icons__item._fb: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
+                    li.social-icons__item._.in: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+    script(src='js/main.js')

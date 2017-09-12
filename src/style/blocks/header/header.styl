@@ -13,6 +13,13 @@
       .ocean-logo
         @media (min-width: $tablet)
           display block
+          opacity 1
+          pointer-events auto
+      .anos-logo
+        @media (min-width: $tablet)
+          display none
+      .page-title
+        display block     
   &__wrapper
     display flex
     align-items center
@@ -29,6 +36,7 @@
     letter-spacing .05em
     margin 0 auto 0 82px
     position relative
+    text-transform uppercase
     &::before
       position absolute
       top 50%

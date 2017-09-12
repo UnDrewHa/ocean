@@ -10,11 +10,11 @@ html
     link(rel='stylesheet', href='css/main.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
   body
-    - var items = ['Inicio','Corporativo','Instalaciones acuaticas','Limpieza','Servicios auxiliares','Building & Construction','Mantenimiento'];
+    - var items = ['Inicio','Instalaciones acuaticas','Limpieza','Servicios auxiliares','Building & Construction','Mantenimiento'];
     +burger(items)
     header.header._inner-page
         .header__wrapper
-            a(href='/').ocean-logo
+            a(href='index.html').ocean-logo
             .anos-logo    
             h1.page-title Corporativo
             .header__burger: span
@@ -90,7 +90,7 @@ html
                   a(href='mailto:info@grupocean.com') info@grupocean.com
         .slide-footer__bottom
             .slide-footer__logos
-                a(href='/').footer-ocean
+                a(href='index.html').footer-ocean
                 .cedec
                 .iso
                 .eqa
