@@ -116,6 +116,15 @@ html.fp-enabled,
 #fp-nav.left {
     left: 20px;
 }
+
+@media (max-width: 767px) {
+    #fp-nav.right {
+        right: -10px;
+    }
+    #fp-nav.left {
+        left: -10px;
+    }
+}
 .fp-slidesNav{
     position: absolute;
     z-index: 4;

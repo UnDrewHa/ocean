@@ -27,23 +27,28 @@
     top: 0
     background #121212
     height 100%
-    overflow hidden 
-    max-width 300px
-    padding 88px 0 0
+    overflow hidden
+    padding 44px 0 0
     transition transform .25s ease
     transform translate3d(100%, 0, 0) 
-    width 80%
+    width 100%
     z-index 2
+    @media (min-width: $tablet)
+      max-width 300px
+      padding 88px 0 0
        
   &__close
     position absolute
-    top: 22px
-    right: 28px
+    top: 0
+    right: 0
     cursor pointer
     display block
     height 44px
     width 44px
     z-index 3
+    @media (min-width: $tablet)
+      top 22px
+      right 28px
     &::before
     &::after
       position: absolute;
@@ -66,7 +71,7 @@
         fill #fff
   &__list
     position absolute
-    top 88px
+    top 44px
     left 0
     bottom 0
     right 0
@@ -78,6 +83,8 @@
     margin 0
     padding 0
     z-index 2
+    @media (min-width: $tablet)
+      top 88px
     &::after
       content ''
       display block
@@ -90,13 +97,21 @@
     letter-spacing .05em
     margin 0
     padding 0
+    text-align center
     text-transform uppercase
+    &._social
+      border 0
+      height auto
+      padding 30px 0 0
+      @media (min-width: $tablet)
+        padding 30px 0 0 30px
     &:first-of-type
       border-top 1px solid rgba(255,255,255,.05)
     @media (min-width: $tablet)
       height 70px
       line-height 69px
-    a
+      text-align left
+    > a
       color #fff
       display block
       height 100%

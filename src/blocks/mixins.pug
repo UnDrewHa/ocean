@@ -6,8 +6,9 @@ mixin burger(items)
         ul.burger-menu__list
           each val in items
             li.burger-menu__item: a(href='#')= val
-        ul.social-icons
-          li.social-icons__item._fb: a(href='#').
-              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
-          li.social-icons__item._.in: a(href='#').
-              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+          li.burger-menu__item._social  
+            ul.social-icons
+              li.social-icons__item._fb: a(href='#').
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
+              li.social-icons__item._.in: a(href='#').
+                  <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>

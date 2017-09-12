@@ -4,6 +4,9 @@
   margin 0
   padding 0
   text-align center
+  .burger-menu &
+    @media (min-width: $tablet)
+      justify-content flex-start
   &__item
     border 1px solid #3b78bf
     border-radius 50%
@@ -15,6 +18,7 @@
     list-style-type none
     margin 0
     padding 0
+    transition border-color .2s ease
     width 40px
     &:hover
       border-color #fff
@@ -25,9 +29,16 @@
       height 100%
       width 100%    
     svg
+      display block
       fill #3b78bf
       height 100%
+      transition fill .2s ease
       width 100%
     
     & + .social-icons__item
       margin 0 0 0 11px
+      .burger-menu &
+        margin 0 0 0 30px
+        @media (min-width: $tablet)
+          margin 0 0 0 25px
+        
