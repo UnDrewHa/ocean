@@ -27,13 +27,19 @@ $(document).ready(function() {
             paddingTop: '0',
             paddingBottom: '0',
             fixedElements: '.header',
-            // loopBottom: true,
 
             onLeave: onSlideLeave
         });
 
         $('.js-next-section').on('click', function () {
-            $.fn.fullpage.moveSectionDown();
+            var target = $(this).attr('data-id');
+
+            if (target) {
+                $("html, body").animate({ scrollTop: $(target).offset().top }, 500);
+            } else {
+                $.fn.fullpage.moveSectionDown();
+            }
+            
         });
     } else {
         body.addClass('_fullpage-accordion');
@@ -43,7 +49,13 @@ $(document).ready(function() {
         });
     }
 
-    
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > $(window).height()) {
+            $('body').addClass('_after-intro');
+        } else {
+            $('body').removeClass('_after-intro');
+        }
+    });
 
     $('.header__burger, .burger-menu__close, .burger-menu__overlay').on('click', function () {
         $('body').toggleClass('burger-menu-opened');

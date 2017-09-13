@@ -1,0 +1,87 @@
+include blocks/mixins
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Ocean Corporativo
+    meta(name='description', content='Ocean')
+    meta(name='viewport', content='width=device-width')
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+  body._inner-page
+    - var items = ['Inicio','Instalaciones acuaticas','Limpieza','Servicios auxiliares','Building & Construction','Mantenimiento'];
+    +burger(items)
+    header.header._inner-page
+        .header__wrapper
+            a(href='index.html').ocean-logo
+            .anos-logo    
+            h1.page-title SERVICIOS AUXILIARES
+            .header__burger: span
+
+    .section._intro-section._corp1
+            .section__inner
+                .section-title: span Corporativo
+                .next-section-button.js-next-section(data-id='#main')
+            footer.slide-footer._last
+                .slide-footer__top
+                    .slide-footer__wrapper
+                        p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                        .slide-footer__links
+                          a(href='#') Teléfono: 913 866 866
+                          a(href='mailto:info@grupocean.com') info@grupocean.com        
+
+    .main#main
+        .parallax-block(data-parallax="scroll" data-image-src="i/corporativo_serv_parallax.jpg")
+        .main__content
+            .wysiwyg
+                p La limpieza constituye uno de los servicios más importantes dentro de un inmueble. Somos conscientes de que un entorno limpio y saneado adecuadamente incide positivamente en el buen ambiente laboral y en la  productividad de las personas. Por ello, ayudamos a nuestros clientes mediante este servicio creando un impacto positivo y haciendo que sea:
+                h3 Estudiado
+                p Conocemos la importancia del análisis de las necesidades en base a las características del inmueble y la actividad que se desarrolla. De este modo, diferenciamos las labores a desempeñar en un hospital, local comercial,  un edificio de oficinas o una nave industrial.
+                h3 Equilibrado
+                p Entre calidad y precio, como característica fundamental de nuestras propuestas.
+                h3 Cualificado
+                p Incorporando medios humanos con una amplia experiencia y la más completa y moderna maquinaria.
+                h3 Comprometido
+                p Con el medio ambiente. Utilizamos productos ecológicos que no generan residuos. Garantizamos la máxima eficiencia y productividad utilizando maquinaria de última generación en cada servicio.
+                h3 Responsable
+                p Con todos sus empleados. Cumpliendo la normativa vigente en materia de convenios. <b>Un servicio de calidad comienza por un empleo de calidad.</b>
+                hr
+                h3 Por tipología de CENTRO:
+                ul
+                    li Limpieza de edificios residenciales y comunidades
+                    li Limpieza de oficinas
+                    li Limpieza de colegios
+                    li Limpieza de centros deportivos
+                    li Limpieza de locales comerciales
+                    li Limpiezas instalaciones industriales
+                h3 Por tipología de SERVICIO:
+                ul
+                    li Limpieza de mantenimiento
+                    li Limpieza de obra
+                    li Limpieza de fachadas
+                    li Limpieza de cristales
+                    li Limpieza mecanizada
+                    li Limpiezas especiales
+                hr      
+
+
+    footer.slide-footer
+        .slide-footer__top
+            .slide-footer__wrapper
+                p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                .slide-footer__links
+                  a(href='#') Teléfono: 913 866 866
+                  a(href='mailto:info@grupocean.com') info@grupocean.com
+        .slide-footer__bottom
+            .slide-footer__logos
+                a(href='index.html').footer-ocean
+                .cedec
+                .iso
+                .eqa
+                ul.social-icons
+                    li.social-icons__item._fb: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
+                    li.social-icons__item._.in: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+    script(src='js/main.js')

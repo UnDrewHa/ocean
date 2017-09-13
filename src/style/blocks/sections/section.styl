@@ -5,8 +5,13 @@
   display flex
   flex-direction column
   &._intro-section
+    height 100vmax
     @media (min-width: $tablet)
       display none
+  &._hidden-footer
+    footer
+      position static
+      opacity 0
   .big-ocean-logo
     align-self center
     background url('../i/ocean_logo_url.svg') 50% no-repeat
@@ -21,12 +26,24 @@
     left 0
     right 0
     bottom 30px
-    background url('../i/next_section_button.png') 50% no-repeat
-    background-size 20px 22px
     cursor pointer
     height 50px
     margin 0 auto
     width 50px
+    &::before,
+    &::after
+      position absolute
+      top 0
+      left 0
+      right 0
+      background url('../i/mouse-arrow.svg') 50% no-repeat
+      content ''
+      height 10px
+      margin 0 auto
+      animation: mouse-arrow 3s ease infinite
+      width 30px
+    &::after
+      top 10px
     @media (min-width: $tablet)
       bottom 35px
   &__inner
@@ -71,6 +88,13 @@
     &:hover
       span::after
         transform translateY(-10px)
+    &._jardines span::after
+          background #9cc255
+    &._obras span::after
+      background #e9333d
+    &._limpieza span::after
+      background #535453
+    
     span
       position relative
       &::after
@@ -107,5 +131,31 @@
     background-image url('../i/corp5.jpg')
   &._corp6
     background-image url('../i/corp6.jpg')
+  &._resid1
+    background-image url('../i/resid1.jpg')
+  &._resid2
+    background-image url('../i/resid2.jpg')
+  &._resid3
+    background-image url('../i/resid3.jpg')
+  &._resid4
+    background-image url('../i/resid4.jpg')
+  &._resid5
+    background-image url('../i/resid5.jpg')
     
-    
+@keyframes mouse-arrow {
+  80% {
+    transform: translateY(0)
+  }
+
+  85% {
+    transform: translateY(25%)
+  }
+
+  90% {
+    transform: translateY(0)
+  }
+
+  95% {
+    transform: translateY(25%)
+  }
+}

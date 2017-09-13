@@ -1,0 +1,88 @@
+include blocks/mixins
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Ocean Corporativo agua
+    meta(name='description', content='Ocean')
+    meta(name='viewport', content='width=device-width')
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+  body._inner-page
+    - var items = ['Inicio','Instalaciones acuaticas','Limpieza','Servicios auxiliares','Building & Construction','Mantenimiento'];
+    +burger(items)
+    header.header._inner-page
+        .header__wrapper
+            a(href='index.html').ocean-logo
+            .anos-logo    
+            h1.page-title Instalaciones acuaticas
+            .header__burger: span
+
+    .section._intro-section._corp1
+            .section__inner
+                .section-title: span Corporativo
+                .next-section-button.js-next-section(data-id='#main')
+            footer.slide-footer._last
+                .slide-footer__top
+                    .slide-footer__wrapper
+                        p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                        .slide-footer__links
+                          a(href='#') Teléfono: 913 866 866
+                          a(href='mailto:info@grupocean.com') info@grupocean.com        
+
+    .main#main
+        .parallax-block(data-parallax="scroll" data-image-src="i/corporativo_agua_parallax.jpg")
+        .main__content
+            .wysiwyg
+                p En <b class='em'>OCEAN</b>, somos  líderes y referencia en el mantenimiento de piscinas, somos un gran equipo de profesionales que en trece años de existencia nos hemos  situado como empresa de referencia en el sector de servicios a piscinas e instalaciones acuáticas.
+                p Somos miembro asociado de la ATEP (Asociación de técnicos e industriales de piscinas) y actualmente prestamos servicio en más de 200 instalaciones, muchas de ellas instalaciones de referencia en la Comunidad de Madrid.
+                p Ocean Piscinas  dispone de más de 1.200 m2 de instalaciones propias donde además de  oficinas, cuentamos con un gran almacén con un completo stock de todo tipo de material, repuestos, taller de electromecánica, amplia flota de vehículos...etc., lo que nos permite ofrecer el mejor mantenimiento de piscinas y dar una rápida respuesta a cualquier incidencia durante 24 horas al día los 7 días de la semana.
+                p En <b class='em'>OCEAN</b> socorrismo también damos  servicio de actividades extraescolares, así como al de la formación sanitaria, dirigido a colectividades como a particulares dentro del campo de la educación.
+                p Contamos en nuestras instalaciones como mas de 1000 m2 dedicados a la formación sanitaria, así como convenios con piscinas climatizadas en la Comunidad de Madrid para la preparación y la realización de diversos cursos. Proporcionamos todos los medios técnicos y humanos para que el aprendizaje sea una experiencia no sólo eficaz, sino también divertida.
+
+        .parallax-block(data-parallax="scroll" data-image-src="i/corporativo_agua_parallax2.jpg")
+        .main__content
+            .wysiwyg
+                hr
+                h3 Nuestros Valores:
+                ol.white
+                    li ALTA CALIDAD
+                    li PRECIOS COMPETENTES
+                    li
+                        | SEGURIDAD Y LEGALIDAD
+                        ul
+                            li Personal contratado
+                            li Seguro de Responsabilidad Civil
+                            li Plan de prevención de riesgos laborales
+                            li Plan de vigilancia de la Salud de los trabajadores
+                            li Ley orgánica de Protección de datos.
+                    li
+                        | GARANTÍAS DE ÉXITO
+                        ul
+                            li Domicilio de recibos
+                            li Gestión integral de inscripciones
+                            li Posibilidad de gestión online. Sin moverte de casa
+                            li Coordinadores presenciales en los centros
+                            li Profesores de sustitución en caso de ausencia
+                hr
+
+    footer.slide-footer
+        .slide-footer__top
+            .slide-footer__wrapper
+                p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                .slide-footer__links
+                  a(href='#') Teléfono: 913 866 866
+                  a(href='mailto:info@grupocean.com') info@grupocean.com
+        .slide-footer__bottom
+            .slide-footer__logos
+                a(href='index.html').footer-ocean
+                .cedec
+                .iso
+                .eqa
+                ul.social-icons
+                    li.social-icons__item._fb: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
+                    li.social-icons__item._.in: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+    script(src='js/main.js')

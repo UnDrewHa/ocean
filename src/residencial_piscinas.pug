@@ -1,0 +1,116 @@
+include blocks/mixins
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Ocean RESIDENCIAL piscinas
+    meta(name='description', content='Ocean')
+    meta(name='viewport', content='width=device-width')
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+  body._inner-page
+    - var items = ['Inicio','Residencial','Piscinas & Socorristas','Jardines','Conserjeria & Limpieza','Obras'];
+    +burger(items)
+    header.header._inner-page
+        .header__wrapper
+            a(href='index.html').ocean-logo
+            .anos-logo    
+            h1.page-title Piscinas &amp; Socorrismo
+            .header__burger: span
+
+    .section._intro-section._hidden-footer._corp1
+            .section__inner
+                .section-title: span RESIDENCIAL
+                .next-section-button.js-next-section(data-id='#main')
+            footer.slide-footer._last
+                .slide-footer__top
+                    .slide-footer__wrapper
+                        p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                        .slide-footer__links
+                          a(href='#') Teléfono: 913 866 866
+                          a(href='mailto:info@grupocean.com') info@grupocean.com        
+
+    .main#main
+        .parallax-block(data-parallax="scroll" data-image-src="i/resid_iscinas_parallax.jpg")
+        .main__content
+            .wysiwyg
+                p <b class='em'>Ocean</b>, en sus 15 años de existencia se ha situado como una empresa de referencia en el sector de las piscinas y las instalaciones acuáticas piscinas, spas y balnearios, gimnasios, centros de wellness, hoteles, colegios, empresas y Administraciones Públicas.
+                p Actualmente presta servicio en más de 320 instalaciones acuáticas.
+                h2 MANTENIMINETO DE PISCINAS
+                p Nuestro personal está altamente cualificado en el manejo, instalación y mantenimiento de equipos de depuración y desinfección que incluye el manejo y mantenimiento de:
+                ul._bordered
+                    li Bombas
+                    li Filtros
+                    li Cloradores salinos
+                    li Equipos de control automático de dosificación
+                    li Armarios de control de válvulas motorizadas
+                    li Equipos de desumectación y climatización
+                    li Equipos de calentamiento de agua, etc.
+                h2 SOCORRISMO
+                p <b class='em'>Ocean</b> dispone de un departamento permanente de Recursos Humanos que desarrolla durante todo el año una gran labor de selección, cualificación y motivación de todo nuestro personal para desempeñar el trabajo con las máximas garantías:
+                ul._bordered
+                    li Salvamento y socorrismo
+                    li Monitores
+                    li Médicos, ATS, DUE…
+                    li Personal de limpieza
+                    li Controladores de acceso, etc.
+                p Disponemos de centro de formación propio y homologado por la Comunidad de Madrid en nuestras instalaciones, impartiendo cursos de formación sanitaria a los distintos grupos de personal y realizando también una función de supervisión y apoyo:
+                ul._bordered
+                    li Socorrismo acuático
+                    li Primeros auxilios
+                    li DEA (desfibrilación)
+                    li Soporte Vital básico y avanzado
+                    li Reciclaje, etc.
+                p <b class='em'>Ocean</b> también dispone de servicio de reparto y suministro de producto químico así como de venta, instalación y reparación de equipamiento para instalaciones acuáticas:
+                ul._piscinas._clean
+                    li
+                        img(src='i/piscinas_i1.png')
+                        span Bombas<br>y filtros
+
+                    li
+                        img(src='i/piscinas_i2.png')
+                        span Cloración<br>salina
+                    li
+                        img(src='i/piscinas_i3.png')
+                        span Equipos de dosificación<br>y control automático
+
+                    li
+                        img(src='i/piscinas_i4.png')
+                        span Iluminación led,<br>halógena
+
+                    li
+                        img(src='i/piscinas_i5.png')
+                        span Arena de sílex,<br>vidrio eco-filtrante
+
+                    li
+                        img(src='i/piscinas_i6.png')
+                        span Accesorios inox:<br>escaleras, duchas, etc.
+
+
+
+
+
+
+                
+
+
+    footer.slide-footer
+        .slide-footer__top
+            .slide-footer__wrapper
+                p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                .slide-footer__links
+                  a(href='#') Teléfono: 913 866 866
+                  a(href='mailto:info@grupocean.com') info@grupocean.com
+        .slide-footer__bottom
+            .slide-footer__logos
+                a(href='index.html').footer-ocean
+                .cedec
+                .iso
+                .eqa
+                ul.social-icons
+                    li.social-icons__item._fb: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
+                    li.social-icons__item._.in: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+    script(src='js/main.js')

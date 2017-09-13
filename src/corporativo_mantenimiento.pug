@@ -1,0 +1,79 @@
+include blocks/mixins
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Ocean Corporativo
+    meta(name='description', content='Ocean')
+    meta(name='viewport', content='width=device-width')
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+  body._inner-page
+    - var items = ['Inicio','Instalaciones acuaticas','Limpieza','Servicios auxiliares','Building & Construction','Mantenimiento'];
+    +burger(items)
+    header.header._inner-page
+        .header__wrapper
+            a(href='index.html').ocean-logo
+            .anos-logo    
+            h1.page-title Mantenimiento
+            .header__burger: span
+
+    .section._intro-section._corp1
+            .section__inner
+                .section-title: span Corporativo
+                .next-section-button.js-next-section(data-id='#main')
+            footer.slide-footer._last
+                .slide-footer__top
+                    .slide-footer__wrapper
+                        p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                        .slide-footer__links
+                          a(href='#') Teléfono: 913 866 866
+                          a(href='mailto:info@grupocean.com') info@grupocean.com        
+
+    .main#main
+        .parallax-block(data-parallax="scroll" data-image-src="i/corporativo_mant_parallax.jpg")
+        .main__content
+            .wysiwyg
+                p <b class='em'>Ocean</b> ofrece una amplia propuesta de servicios de mantenimiento técnico. Todas, con un enfoque en común: Maximizar la vida útil de las instalaciones y garantizar la continuidad de la actividad en cualquier situación.
+                p Contamos con una experiencia de más de 10 años ofreciendo soluciones de mantenimiento integral de instalaciones y con un equipo de profesionales acreditados gestionando una amplia diversidad de instalaciones.
+                p Nuestros “Casos de Éxito” sirven de referencia ejemplos de algunos proyectos que esta compañía ha liderado.
+                p Disponemos como apoyo una oficina técnica que junto a un equipo de campo para cada especialidad  garantiza el mantenimiento del siguiente tipo de instalaciones: 
+                ul._bordered
+                    li Climatización y producción de calor
+                    li Mantenimiento eléctrico
+                    li Protección Contra Incendios (PCI)
+                    li Fontanería y grupos de presión
+                p Estudiamos cada caso individualmente para ofrecer a cada cliente una solución personalizada. El alcance de las tareas de mantenimiento (preventivo, predictivo y conductivo), se determina a partir de la normativa de aplicación vigente por cada instalación, variando la frecuencia y las tareas a desarrollar en función de las necesidades de cada uno de los centros.
+                p <b class='em'>Ocean</b> abarca todo el abanico de mantenimiento de instalaciones en España y Portugal. Damos servicio a través de personal propio en cada una de sus delegaciones o en colaboración con Partners, proporcionando así, la posibilidad de dar alcance a cualquier necesidad requerida.
+                p Nuestro conocimiento y experiencia hace que multitud de empresas confíen en nosotros para dar cobertura a instalaciones de diferente índole:
+                ul._bordered
+                    li Mantenimiento de centros deportivos
+                    li Mantenimiento de locales comerciales
+                    li Mantenimiento en edificios de oficinas
+                    li Mantenimiento de edificios residenciales y comunidades
+                    li Mantenimiento de edificios industriales
+
+    
+
+
+
+    footer.slide-footer
+        .slide-footer__top
+            .slide-footer__wrapper
+                p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                .slide-footer__links
+                  a(href='#') Teléfono: 913 866 866
+                  a(href='mailto:info@grupocean.com') info@grupocean.com
+        .slide-footer__bottom
+            .slide-footer__logos
+                a(href='index.html').footer-ocean
+                .cedec
+                .iso
+                .eqa
+                ul.social-icons
+                    li.social-icons__item._fb: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
+                    li.social-icons__item._.in: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+    script(src='js/main.js')

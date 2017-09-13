@@ -1,0 +1,69 @@
+include blocks/mixins
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Ocean RESIDENCIAL obras
+    meta(name='description', content='Ocean')
+    meta(name='viewport', content='width=device-width')
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+  body._inner-page._obras
+    - var items = ['Inicio','Residencial','Piscinas & Socorristas','Jardines','Conserjeria & Limpieza','Obras'];
+    +burger(items)
+    header.header._inner-page
+        .header__wrapper
+            a(href='index.html').ocean-logo
+            .anos-logo    
+            h1.page-title obras
+            .header__burger: span
+
+    .section._intro-section._hidden-footer._corp1
+            .section__inner
+                .section-title: span RESIDENCIAL
+                .next-section-button.js-next-section(data-id='#main')
+            footer.slide-footer._last
+                .slide-footer__top
+                    .slide-footer__wrapper
+                        p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                        .slide-footer__links
+                          a(href='#') Teléfono: 913 866 866
+                          a(href='mailto:info@grupocean.com') info@grupocean.com        
+
+    .main#main
+        .parallax-block(data-parallax="scroll" data-image-src="i/resid_obras_parallax.jpg")
+        .main__content
+            .wysiwyg
+                h2 DEPARTAMENTO DE OBRAS Y PROYECTOS
+                p A través de Ocean Obras le ofrecemos un servicio continuo de atención de incidencias, respondemos a reparaciones de obra civil e instalaciones, orientado a edificios residenciales, comerciales y de oficinas. También podemos encargarnos de suministrar e instalar el equipamiento y accesorios que necesite para su inmueble.
+                p Nuestro objetivo es ofrecerle el mejor nivel de servicio en la diagnosis y ejecución desde los avisos y reparaciones más sencillos hasta las obras y rehabilitaciones de mayor envergadura. 
+                p Para ello disponemos de un equipo humano que conforma una amplia plantilla de profesionales propios para la ejecución de todo tipo de trabajos de obra civil, albañilería, pintura, fontanería, electricidad, cerrajería, fachadas, impermeabilizaciones y reparaciones o instalaciones de cualquier elemento de su finca o edificio. 
+                p Estos servicios van dirigidos principalmente a Administradores de Fincas, Gestores de Activos Inmobiliarios, Comunidades de Propietarios, propietarios particulares y Sociedades propietarias de  edificios.
+                ul._bordered
+                    li OBRAS DE: ALBAÑILERÍA, PINTURA, FONTANERÍA, ELECTRICIDAD... ETC.
+                    li REPARACIONES URGENTES EN COMUNIDADES Y EDIFICIOS.
+                    li REHABILITACIÓN DE IMPERMEABILIZACIONES, FACHADAS, CUBIERTAS…ETC.
+                    li INSPECCIÓN TÉCNICA DE EDIFICIOS.
+                    li PERITACIONES, PROYECTOS, ASESORAMIENTO TÉCNICO DE CONSTRUCCIÓN.
+
+
+    footer.slide-footer
+        .slide-footer__top
+            .slide-footer__wrapper
+                p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
+                .slide-footer__links
+                  a(href='#') Teléfono: 913 866 866
+                  a(href='mailto:info@grupocean.com') info@grupocean.com
+        .slide-footer__bottom
+            .slide-footer__logos
+                a(href='index.html').footer-ocean
+                .cedec
+                .iso
+                .eqa
+                ul.social-icons
+                    li.social-icons__item._fb: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
+                    li.social-icons__item._.in: a(href='#').
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+    script(src='js/main.js')

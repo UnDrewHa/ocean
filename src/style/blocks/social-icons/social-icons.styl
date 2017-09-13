@@ -20,10 +20,17 @@
     padding 0
     transition border-color .2s ease
     width 40px
+    ._jardines &
+      border-color #9cc255
+    ._obras &
+      border-color #e9333d  
     &:hover
       border-color #fff
       svg
         fill #fff
+        ._jardines &
+        ._obras &  
+          fill #fff
     a
       display block
       height 100%
@@ -34,6 +41,10 @@
       height 100%
       transition fill .2s ease
       width 100%
+      ._jardines &
+        fill #9cc255
+      ._obras &
+        fill #e9333d    
     
     & + .social-icons__item
       margin 0 0 0 11px

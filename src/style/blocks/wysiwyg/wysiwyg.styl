@@ -4,16 +4,23 @@
   letter-spacing .05em
   margin 0 auto
   max-width 840px
-  padding 35px 0 45px
+  padding 35px 0 40px
   > :first-child
-    margin 0
+    margin-top 0
+  > hr:first-child
+    margin-top 25px
   h2
     color #fff
     font 13px/24px $korataki
-    margin 35px 0 0
+    margin 35px 0
     padding 0 0 20px
     position relative
-    text-transform uppercase  
+    text-transform uppercase
+    @media (max-width: $tablet - 1)
+      text-align center
+      &::after
+        right 0
+        margin 0 auto
     &::after
       position absolute
       left 0
@@ -22,27 +29,111 @@
       content ''
       height 3px
       width 50px
+      ._jardines &
+        background #9cc255
+      ._obras &
+        background #e9333d
+        
   h3
     color #3b78bf
+    font bold 16px/20px $gothic
     margin 25px 0 0
+    ._jardines &
+      color #9cc255
+    ._obras &
+      color #e9333d
+      
+    @media (max-width: $tablet - 1)
+      text-align center
   b
     color #fff
+    &._mobile-centered
+      @media (max-width: $tablet - 1)
+        display block
+        text-align center
   b.em
     color #3b78bf
+    ._jardines &
+      color #9cc255
+    ._obras &
+      color #e9333d
+      
+      
   hr
     background #1e1e1e
     border 0
     display block
     height 1px
-    margin 35px 0
+    margin 45px 0 25px
     outline none
   p
-    margin 25px 0 0  
+    margin 18px 0 0
+    @media (max-width: $tablet - 1)
+      text-align center
   ul, ol
-    border-top 1px solid #1e1e1e
-    border-bottom 1px solid #1e1e1e
-    margin 35px 0 0
-    padding 25px 0
+    margin 15px 0 0
+    padding 0
+    &._bordered
+      border-top 1px solid #1e1e1e
+      border-bottom 1px solid #1e1e1e
+      margin 35px 0
+      padding 25px 0
+    &._double
+      @media (min-width: $tablet)
+        column-count 2
+        column-width 50% 
+    &._row
+      li
+        display inline-block
+    &._clean
+      li
+        padding 0
+        &::before
+          display none
+    &._jardines-img
+      margin 25px 0
+      @media (max-width: $tablet)
+        display flex
+        flex-wrap wrap
+        justify-content center
+        li
+          margin 0 0 10px
+          text-align center
+          width 30%
+        img
+          margin 0
+      img
+        margin 0 26px 0 0
+        width 53px 
+    &._piscinas
+      display flex
+      flex-wrap wrap
+      margin 35px 0
+      @media (min-width: $tablet)
+        margin 35px 0 0
+      
+      li
+        color #3b78bf
+        display flex
+        align-items center
+        font-weight bold
+        margin-bottom 20px
+        width 50%
+        @media (max-width: $tablet - 1)
+          flex-direction column
+          padding 0 30px
+          text-align center
+        @media (min-width: $tablet)
+          width 33%
+      span
+        display block
+      img
+        height 56px
+        margin 0 0 7px
+        width 56px
+        @media (min-width: $tablet)
+          margin 0 20px 0 0
+          
   ol
     li
       list-style-position: outside;
@@ -51,6 +142,8 @@
   ol.white
     border 0
     padding 0
+    + hr
+      margin-top 15px
     > li
       color #fff
       margin-bottom 20px
@@ -78,3 +171,8 @@
         display block
         height 5px
         width 5px
+        ._jardines &
+          background #9cc255
+        ._obras &
+          background #e9333d
+          

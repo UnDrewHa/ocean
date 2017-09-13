@@ -4,6 +4,7 @@
   top 0
   left 0
   width 100%
+  z-index 1000
   @media (min-width: $tablet)
     height 90px
   &._inner-page
@@ -47,6 +48,11 @@
       height 30px
       margin -15px 0 0
       width 2px
+      ._jardines &
+        background #9cc255
+      ._obras &
+        background #e9333d
+        
     ._fullpage-accordion &
       display block
   .ocean-logo
@@ -59,6 +65,11 @@
       display block
       height 30px
       width 140px
+      ._jardines &
+        background-image url('../i/ocean_logo_top_green.svg')
+      ._obras &
+        background-image url('../i/ocean_logo_top_red.svg')
+        
     ._after-intro &
       @media (min-width: $tablet)
         opacity 1

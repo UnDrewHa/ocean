@@ -1,10 +1,18 @@
 .slide-footer
   background #000
   font 10px/16px $gothic
+  letter-spacing .05em
   text-align center
   width 100%
   @media (min-width: $tablet)
     background #121212
+  ._inner-page &
+    @media (max-width: $tablet - 1)
+      position fixed
+      bottom 0
+      left 0
+      right 0
+      z-index 1000  
   &__wrapper
     margin 0 auto
     padding 13px 40px
@@ -35,6 +43,11 @@
       margin 0 56px 0 0
       position relative
       width 140px
+      ._jardines &
+        background-image url('../i/ocean_logo_url_green.svg')
+      ._obras &
+        background-image url('../i/ocean_logo_url_red.svg')
+        
       &::after
         position absolute
         top 2px
@@ -43,6 +56,11 @@
         content ''
         height 30px
         width 2px
+        ._jardines &
+          background #9cc255
+        ._obras &
+          background #e9333d
+          
     .cedec
       background url('../i/cedec.png') 50% no-repeat
       background-size contain
@@ -66,6 +84,11 @@
     a
       color #3b78bf
       display inline-block
+      ._jardines &
+          color #9cc255
+        ._obras &
+          color #e9333d
+          
       &:hover
         text-decoration underline
       & + a
