@@ -1,8 +1,6 @@
 //= plugins.js
 //
 
-function deviceDetector () { var b=navigator.userAgent.toLowerCase(),a=function(a){void 0!==a&&(b=a.toLowerCase());return/(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(b)?"tablet":/(mobi|ipod|phone|blackberry|opera mini|fennec|minimo|symbian|psp|nintendo ds|archos|skyfire|puffin|blazer|bolt|gobrowser|iris|maemo|semc|teashark|uzard)/.test(b)?"mobile":"desktop"};return{device:a(),detect:a,isMobile:"desktop"!=a()?!0:!1,userAgent:b}}
-
 function onSlideLeave (index, nextIndex, direction) {
     if (index === 1 && direction === 'down') {
         $('body').addClass('_after-intro');
@@ -13,9 +11,10 @@ function onSlideLeave (index, nextIndex, direction) {
 
 $(document).ready(function() {
 
-    var slideNavigation = deviceDetector().device !== 'mobile',
+
+    var slideNavigation = !device.mobile(),
         fullpageContainer = $('#fullpage'),
-        makeAccordion = (deviceDetector().device === 'desktop' && $(window).width() >= 1000 && fullpageContainer.attr('data-type') === 'accordion'),
+        makeAccordion = (device.desktop() && $(window).width() >= 1000 && fullpageContainer.attr('data-type') === 'accordion'),
         body = $('body');
 
     if (!makeAccordion && fullpageContainer) {
