@@ -10,7 +10,8 @@ html
     link(rel='stylesheet', href='css/main.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
   body
-    - var items = ['Inicio', 'Corporativo', 'Residencial', '¿Quienes somos?', 'Trabaja con nosotros'];
+    - var items = {'Inicio':'/', 'Corporativo':'/corporativo.html', 'Residencial':'/residencial.html', '¿Quienes somos?':'/quienes_somos.html', 'Trabaja con nosotros':'http://grupocean.com/trabaja-con-nosotros.html'};
+
     +burger(items)
     header.header
         .header__wrapper
@@ -27,38 +28,38 @@ html
                     .slide-footer__wrapper
                         p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
                         .slide-footer__links
-                          a(href='#') Teléfono: 913 866 866
+                          a(href='tel:913866866') Teléfono: 913 866 866
                           a(href='mailto:info@grupocean.com') info@grupocean.com
         .section._s2
             .section__double-wrap
-                a(href='#').section-title.left-b: span RESIDENCIAL
-                a(href='#').section-title.right-b: span CORPORATIVO
+                a(href='/residencial.html').section-title.left-b: span RESIDENCIAL
+                a(href='/corporativo.html').section-title.right-b: span CORPORATIVO
             footer.slide-footer._last
                     .slide-footer__top
                         .slide-footer__wrapper
                             p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
                             .slide-footer__links
-                              a(href='#') Teléfono: 913 866 866
+                              a(href='tel:913866866') Teléfono: 913 866 866
                               a(href='mailto:info@grupocean.com') info@grupocean.com
         .section._s3
             .section__inner
-                a(href='#').section-title: span ¿QUIENES SOMOS?
+                a(href='/quienes_somos.html').section-title: span ¿QUIENES SOMOS?
             footer.slide-footer._last
                 .slide-footer__top
                     .slide-footer__wrapper
                         p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
                         .slide-footer__links
-                          a(href='#') Teléfono: 913 866 866
+                          a(href='tel:913866866') Teléfono: 913 866 866
                           a(href='mailto:info@grupocean.com') info@grupocean.com
         .section._s4
             .section__inner
-                a(href='http://grupocean.com/trabaja-con-nosotros.html').section-title: span TRABAJA<br>CON NOSOTROS
+                a(href='http://grupocean.com/trabaja-con-nosotros.html' target='_blank').section-title: span TRABAJA<br>CON NOSOTROS
             footer.slide-footer
                 .slide-footer__top
                     .slide-footer__wrapper
                         p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
                         .slide-footer__links
-                          a(href='#') Teléfono: 913 866 866
+                          a(href='tel:913866866') Teléfono: 913 866 866
                           a(href='mailto:info@grupocean.com') info@grupocean.com
                 .slide-footer__bottom
                     .slide-footer__logos
@@ -66,9 +67,5 @@ html
                         .cedec
                         .iso
                         .eqa
-                        ul.social-icons
-                            li.social-icons__item._fb: a(href='#').
-                                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
-                            li.social-icons__item._.in: a(href='#').
-                                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+                        include blocks/social
     script(src='js/main.js')

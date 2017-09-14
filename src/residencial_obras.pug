@@ -10,16 +10,17 @@ html
     link(rel='stylesheet', href='css/main.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
   body._inner-page._obras
-    - var items = ['Inicio','Residencial','Piscinas & Socorristas','Jardines','Conserjeria & Limpieza','Obras'];
+    - var items = {'Inicio':'/index.html','Residencial':'/residencial.html','Piscinas & Socorristas':'/residencial_piscinas.html','Jardines':'/residencial_jardines.html','Conserjeria & Limpieza':'/residencial_conserjeria.html','Obras':'/residencial_obras.html'};
+
     +burger(items)
     header.header._inner-page
         .header__wrapper
-            a(href='index.html').ocean-logo
+            a(href='/').ocean-logo
             .anos-logo    
             h1.page-title obras
             .header__burger: span
 
-    .section._intro-section._hidden-footer._corp1
+    .section._intro-section._hidden-footer._resid5
             .section__inner
                 .section-title._obras: span obras
                 .next-section-button.js-next-section(data-id='#main')
@@ -28,7 +29,7 @@ html
                     .slide-footer__wrapper
                         p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
                         .slide-footer__links
-                          a(href='#') Teléfono: 913 866 866
+                          a(href='tel:913866866') Teléfono: 913 866 866
                           a(href='mailto:info@grupocean.com') info@grupocean.com        
 
     .main#main
@@ -53,17 +54,13 @@ html
             .slide-footer__wrapper
                 p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
                 .slide-footer__links
-                  a(href='#') Teléfono: 913 866 866
+                  a(href='tel:913866866') Teléfono: 913 866 866
                   a(href='mailto:info@grupocean.com') info@grupocean.com
         .slide-footer__bottom
             .slide-footer__logos
-                a(href='index.html').footer-ocean
+                a(href='/').footer-ocean
                 .cedec
                 .iso
                 .eqa
-                ul.social-icons
-                    li.social-icons__item._fb: a(href='#').
-                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
-                    li.social-icons__item._.in: a(href='#').
-                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+                include blocks/social
     script(src='js/main.js')

@@ -10,16 +10,17 @@ html
     link(rel='stylesheet', href='css/main.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
   body._inner-page
-    - var items = ['Inicio','Instalaciones acuaticas','Limpieza','Servicios auxiliares','Building & Construction','Mantenimiento'];
+    - var items = {'Inicio':'/','Corporativo':'/corporativo.html', 'Instalaciones acuaticas':'/corporativo_agua.html','Limpieza':'/corporativo_limpieza.html','Servicios auxiliares':'/corporativo_serv.html','Building & Construction':'/corporativo_building.html','Mantenimiento':'/corporativo_mantenimiento.html'};
+
     +burger(items)
     header.header._inner-page
         .header__wrapper
-            a(href='index.html').ocean-logo
+            a(href='/').ocean-logo
             .anos-logo    
             h1.page-title Instalaciones acuaticas
             .header__burger: span
 
-    .section._intro-section._hidden-footer._corp1
+    .section._intro-section._hidden-footer._resid2
             .section__inner
                 .section-title: span Instalaciones acuaticas
                 .next-section-button.js-next-section(data-id='#main')
@@ -28,61 +29,77 @@ html
                     .slide-footer__wrapper
                         p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
                         .slide-footer__links
-                          a(href='#') Teléfono: 913 866 866
+                          a(href='tel:913866866') Teléfono: 913 866 866
                           a(href='mailto:info@grupocean.com') info@grupocean.com        
 
     .main#main
-        .parallax-block(data-parallax="scroll" data-image-src="i/corporativo_agua_parallax.jpg")
+        .parallax-block(data-parallax="scroll" data-image-src="i/resid_iscinas_parallax.jpg")
         .main__content
             .wysiwyg
-                p En <b class='em'>OCEAN</b>, somos  líderes y referencia en el mantenimiento de piscinas, somos un gran equipo de profesionales que en trece años de existencia nos hemos  situado como empresa de referencia en el sector de servicios a piscinas e instalaciones acuáticas.
-                p Somos miembro asociado de la ATEP (Asociación de técnicos e industriales de piscinas) y actualmente prestamos servicio en más de 200 instalaciones, muchas de ellas instalaciones de referencia en la Comunidad de Madrid.
-                p Ocean Piscinas  dispone de más de 1.200 m2 de instalaciones propias donde además de  oficinas, cuentamos con un gran almacén con un completo stock de todo tipo de material, repuestos, taller de electromecánica, amplia flota de vehículos...etc., lo que nos permite ofrecer el mejor mantenimiento de piscinas y dar una rápida respuesta a cualquier incidencia durante 24 horas al día los 7 días de la semana.
-                p En <b class='em'>OCEAN</b> socorrismo también damos  servicio de actividades extraescolares, así como al de la formación sanitaria, dirigido a colectividades como a particulares dentro del campo de la educación.
-                p Contamos en nuestras instalaciones como mas de 1000 m2 dedicados a la formación sanitaria, así como convenios con piscinas climatizadas en la Comunidad de Madrid para la preparación y la realización de diversos cursos. Proporcionamos todos los medios técnicos y humanos para que el aprendizaje sea una experiencia no sólo eficaz, sino también divertida.
+                p <b class='em'>Ocean</b>, en sus 15 años de existencia se ha situado como una empresa de referencia en el sector de las piscinas y las instalaciones acuáticas piscinas, spas y balnearios, gimnasios, centros de wellness, hoteles, colegios, empresas y Administraciones Públicas.
+                p Actualmente presta servicio en más de 320 instalaciones acuáticas.
+                h2 MANTENIMINETO DE PISCINAS
+                p Nuestro personal está altamente cualificado en el manejo, instalación y mantenimiento de equipos de depuración y desinfección que incluye el manejo y mantenimiento de:
+                ul._bordered
+                    li Bombas
+                    li Filtros
+                    li Cloradores salinos
+                    li Equipos de control automático de dosificación
+                    li Armarios de control de válvulas motorizadas
+                    li Equipos de desumectación y climatización
+                    li Equipos de calentamiento de agua, etc.
+                h2 SOCORRISMO
+                p <b class='em'>Ocean</b> dispone de un departamento permanente de Recursos Humanos que desarrolla durante todo el año una gran labor de selección, cualificación y motivación de todo nuestro personal para desempeñar el trabajo con las máximas garantías:
+                ul._bordered
+                    li Salvamento y socorrismo
+                    li Monitores
+                    li Médicos, ATS, DUE…
+                    li Personal de limpieza
+                    li Controladores de acceso, etc.
+                p Disponemos de centro de formación propio y homologado por la Comunidad de Madrid en nuestras instalaciones, impartiendo cursos de formación sanitaria a los distintos grupos de personal y realizando también una función de supervisión y apoyo:
+                ul._bordered
+                    li Socorrismo acuático
+                    li Primeros auxilios
+                    li DEA (desfibrilación)
+                    li Soporte Vital básico y avanzado
+                    li Reciclaje, etc.
+                p <b class='em'>Ocean</b> también dispone de servicio de reparto y suministro de producto químico así como de venta, instalación y reparación de equipamiento para instalaciones acuáticas:
+                ul._piscinas._clean
+                    li
+                        img(src='i/piscinas_i1.png')
+                        span Bombas<br>y filtros
 
-        .parallax-block(data-parallax="scroll" data-image-src="i/corporativo_agua_parallax2.jpg")
-        .main__content
-            .wysiwyg
-                hr
-                h3 Nuestros Valores:
-                ol.white
-                    li ALTA CALIDAD
-                    li PRECIOS COMPETENTES
                     li
-                        | SEGURIDAD Y LEGALIDAD
-                        ul
-                            li Personal contratado
-                            li Seguro de Responsabilidad Civil
-                            li Plan de prevención de riesgos laborales
-                            li Plan de vigilancia de la Salud de los trabajadores
-                            li Ley orgánica de Protección de datos.
+                        img(src='i/piscinas_i2.png')
+                        span Cloración<br>salina
                     li
-                        | GARANTÍAS DE ÉXITO
-                        ul
-                            li Domicilio de recibos
-                            li Gestión integral de inscripciones
-                            li Posibilidad de gestión online. Sin moverte de casa
-                            li Coordinadores presenciales en los centros
-                            li Profesores de sustitución en caso de ausencia
-                hr
+                        img(src='i/piscinas_i3.png')
+                        span Equipos de dosificación<br>y control automático
+
+                    li
+                        img(src='i/piscinas_i4.png')
+                        span Iluminación led,<br>halógena
+
+                    li
+                        img(src='i/piscinas_i5.png')
+                        span Arena de sílex,<br>vidrio eco-filtrante
+
+                    li
+                        img(src='i/piscinas_i6.png')
+                        span Accesorios inox:<br>escaleras, duchas, etc.
 
     footer.slide-footer
         .slide-footer__top
             .slide-footer__wrapper
                 p.slide-footer__address Calle Joaquín Lorenzo, 50 – 28035 – Madrid
                 .slide-footer__links
-                  a(href='#') Teléfono: 913 866 866
+                  a(href='tel:913866866') Teléfono: 913 866 866
                   a(href='mailto:info@grupocean.com') info@grupocean.com
         .slide-footer__bottom
             .slide-footer__logos
-                a(href='index.html').footer-ocean
+                a(href='/').footer-ocean
                 .cedec
                 .iso
                 .eqa
-                ul.social-icons
-                    li.social-icons__item._fb: a(href='#').
-                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#fb"></use></svg>
-                    li.social-icons__item._.in: a(href='#').
-                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/icons.svg#in"></use></svg>
+                include blocks/social
     script(src='js/main.js')
